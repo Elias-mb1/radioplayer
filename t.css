@@ -19,12 +19,34 @@ body {
   border-radius: 8px;
 }
 
-audio {
-  width: 100%;
-  margin-top: 10px;
+.audio {
+  width: 50vw; 
+}
+.border{
+  border: solid black 2px;
+  
+}
+.innerBorder{
+  border-left: solid black 2px;
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.radio {
-  display: inline-block;
-  flex-direction: row;
+.parentWidth{
+  width: 95vw;
+
 }
+.padding{
+  padding-left: 10px;
+}
+.divWidth{
+  width: fit-content;
+}
+img{
+  width: 40vw;
+  padding: 10px;
+}
+
