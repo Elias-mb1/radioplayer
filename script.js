@@ -11,7 +11,6 @@ fetch("https://api.sr.se/api/v2/channels/?format=json")
   .then((data) => {
     // Loop through each channel in data.channels
     data.channels.forEach((channel) => {
-      // Create a new HTML element for each channel
       const channelElement = document.createElement("div");
       channelElement.classList.add("channel");
       channelElement.innerHTML = `
