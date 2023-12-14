@@ -1,0 +1,35 @@
+OWASP
+
+1. What is OWASP and what is its primary mission as described in the article?
+
+OWASP som står för Open Web Application Security Project,
+är en internationell ideell organisation dedikerad till webb-applikationssäkerhet.
+En av deras stora principer är att vara fri att använda och vara enkel tillgänglighet och vara enkel för att förbättra sin webbsäkerhet.
+
+2. Explain the concept of "Injection". Provide an example of how an injection attack could compromise a web application's security.
+
+Det som kallas för Injection Attacker är när opålitlig datakod skickas till en kod-tolk genom ett formulär eller någon annan typ av datautlämning till en webbapplikation.Till exempel kan en angripare ange SQL-databas kod i ett formulär som förväntar sig ett användarnamn i klartext. Genom att infoga specialiserade SQL-satser i ett inmatningsfält kan en angripare köra kommandon som gör det möjligt att hämta data från databasen, förstöra känsliga data eller andra manipulativa beteenden. Det här är vad som kallas för SQL Injection Attack.
+Det finns däremot sätt att motstå och undvika dessa typer av attacker som att validera användaren inskickade data genom att till exempel avvisa uppgifter som ser misstänksamma ut.
+.
+
+3. Explain two strategies to prevent Broken Authentication vulnerabilities.
+
+Tvåfaktorsautentisering, förkortat som 2FA, är en autentiseringsprocess som kräver två olika autentiserings faktorer för att fastställa din identitet. Det innebär att användaren måste bevisa sin identitet på två olika sätt innan åtkomst beviljas. 2FA utgör en form av multifaktorautentisering och lägger till en extra säkerhetsnivå genom att användare måste autentisera sig med två olika metoder, vilket minskar risken för obehörig åtkomst. Huvudsyftet är att stärka autentisering processerna för ökad säkerhet inom olika digitala plattformar och system.
+
+Den andra strategin för att minska chansen till att inkräktare ska komma åt din data är avancerad hastighetsbegränsning. Det ska skydda mot denial-of-service-attacker, bruteforce-försök till inloggning, ökningar av API-trafik och andra typer av missbruk som riktar sig mot API:er och applikationer.
+
+4. Describe the potential consequences of Insecure Deserialization in web applications. How can developers protect against such attacks?
+
+Denna hotbild riktar sig mot många webbapplikationer som frekvent serialiserade och deserialiserar data.
+Ett osäkert deserialisering utnyttjande uppstår när data deserialiseras från opålitliga källor och kan leda till allvarliga konsekvenser såsom DDoS-attacker och attacker med fjärrkörning av kod. För att skydda sig mot dessa attacker bör deserialisering av data från icke betrodda källor förbjudas, även om det finns åtgärder som övervakning och typ kontroller som kan hjälpa till att upptäcka angripare.
+
+5. Briefly define Cross-Site Scripting (XSS) as outlined in the article and list two methods suggested in the article to prevent XSS attacks in web applications.
+
+Cross-site scripting (XSS) sårbarheter uppstår när webbapplikationer tillåter användare att lägga till anpassad kod i en URL-sökväg eller webbplats som kommer att ses av andra användare. Ett vanligt exempel är icke-validerade kommentarsforum där en angripare kan infoga skadlig kod i kommentarer. När andra användare laddar sidan, körs den skadliga koden i deras webbläsare, vilket kan leda till attacker och komprometterad säkerhet.
+
+javaScript cross-site scripting (XSS) attacker innebär att skadlig kod införs på en webbsida, vilket ger angriparen tillgång till känslig information som cookies. Genom att stjäla cookies kan angriparen förfalska användarens identitet online och även skicka stulen data till sin egen webbserver. JavaScript i klienten ger angriparen möjlighet att få tag på känslig information som geografiska koordinater och webbkamera data. XSS-attacker kan användas för att utföra olika typer av skadliga handlingar, inklusive social manipulering och åtkomst till privata uppgifter som bankkontonummer. Det är därför viktigt att skydda webbapplikationer mot XSS-hot genom att implementera lämpliga säkerhetsåtgärder.
+
+Det finns olika sätt att skydda sin data, några av dem är Sanitizing data och WAF rules.
+Sanitizing data är en process som förekommer efter att data har skickats till webbservern men innan den visas för andra användare. Den innebär att data rensas från eventuell skadlig kod för att förhindra hot som cross-site scripting. Det görs med hjälp av olika verktyg för att filtrera bort potentiellt farlig kod och säkerställa att den presenterade datan är säker för användare att se.
+
+WAF-regler (Web Application Firewall) är en säkerhetsåtgärd som konfigureras för att skydda mot reflekterande cross-site scripting och andra hot. Dessa regler används för att blockera misstänkta förfrågningar till servern och ger omfattande skydd mot olika attacker, inklusive cross-site scripting, DDoS-attacker och SQL-injektioner. Cloudflare WAF erbjuder enkel installation och effektivt skydd för webbapplikationer.
